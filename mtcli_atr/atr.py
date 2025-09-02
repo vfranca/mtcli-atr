@@ -1,14 +1,19 @@
+"""Comando para calcular o indicador ATR."""
+
 import click
 import MetaTrader5 as mt5
 from . import conf
 from mtcli.conecta import conectar, shutdown
 from mtcli.logger import setup_logger
 
-logger = setup_logger("atr")
+logger = setup_logger()
+
 
 @click.command()
 @click.option("--symbol", "-s", default="IBOV", help="Símbolo do ativo (default IBOV).")
-@click.option("--periodo", "-po", type=int, default=14, help="Período do ATR (default 14).")
+@click.option(
+    "--periodo", "-po", type=int, default=14, help="Período do ATR (default 14)."
+)
 @click.option("--timeframe", "-t", default="D1", help="Timeframe (ex: M1, H1, D1).")
 def atr(symbol, periodo, timeframe):
     """Exibe o indicador ATR (Average True Range)"""
@@ -40,5 +45,7 @@ def atr(symbol, periodo, timeframe):
         trs.append(tr)
 
     atr_value = sum(trs) / periodo
-    click.echo(f"ATR({periodo}) de {symbol} no timeframe {timeframe.upper()}: {atr_value:.{conf.digitos}f}")
+    click.echo(
+        f"ATR({periodo}) de {symbol} no timeframe {timeframe.upper()}: {atr_value:.{conf.digitos}f}"
+    )
     shutdown()
