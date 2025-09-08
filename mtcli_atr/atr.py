@@ -10,6 +10,7 @@ logger = setup_logger()
 
 
 @click.command()
+@click.version_option(package_name="mtcli-atr")
 @click.option("--symbol", "-s", default="IBOV", help="Símbolo do ativo (default IBOV).")
 @click.option(
     "--periodo", "-po", type=int, default=14, help="Período do ATR (default 14)."
