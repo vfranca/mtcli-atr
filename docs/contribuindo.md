@@ -6,21 +6,21 @@ Contribuições são bem-vindas! Siga as etapas abaixo:
 
 
 
-1\. Fork e clone o repositório
+1. Fork e clone o repositório
 
 
 
 bash
 
-git clone https://github.com/seu-usuario/plugin-exemplo.git
+git clone https://github.com/vfranca/mtcli-atr.git
 
-cd plugin-exemplo
-
-
+cd mtcli-atr
 
 
 
-2\. Crie um ambiente virtual e instale as dependências
+
+
+2. Crie um ambiente virtual e instale as dependências
 
 
 
@@ -28,15 +28,15 @@ bash
 
 python -m venv .venv
 
-source .venv/bin/activate  # No Windows: .venv\\Scripts\\activate
+source .venv/bin/activate  # No Windows: .venvScriptsactivate
 
-pip install -e .\[dev]
-
-
+pip install -e .[dev]
 
 
 
-3\. Execute os testes
+
+
+3. Execute os testes
 
 
 
@@ -48,7 +48,7 @@ pytest
 
 
 
-4\. Contribua com um novo plugin
+4. Contribua com um novo plugin
 
 
 
@@ -58,9 +58,9 @@ Plugins são registrados via o sistema de entry points do mtcli. No `pyproject.t
 
 toml
 
-\[project.entry-points."mtcli.plugins"]
+[project.entry-points."mtcli.plugins"]
 
-meu\_plugin = "plugin\_exemplo.plugin:plugin"
+meu_plugin = "plugin_exemplo.plugin:plugin"
 
 
 
@@ -80,7 +80,7 @@ def plugin():
 
 
 
-5\. Envie um Pull Request
+5. Envie um Pull Request
 
 
 

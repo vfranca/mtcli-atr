@@ -1,6 +1,6 @@
-site_name: plugin-exemplo
-repo_url: https://github.com/vfranca/plugin-exemplo
-repo_name: vfranca/plugin-exemplo
+site_name: mtcli-atr
+repo_url: https://github.com/vfranca/mtcli-atr
+repo_name: vfranca/mtcli-atr
 
 theme:
   name: readthedocs

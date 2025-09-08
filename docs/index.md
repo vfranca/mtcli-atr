@@ -1,4 +1,4 @@
-plugin-exemplo
+mtcli-atr
 
 
 
@@ -32,7 +32,7 @@ Instalação
 
 bash
 
-pip install plugin-exemplo
+pip install mtcli-atr
 
 
 
@@ -48,7 +48,7 @@ Após a instalação, o plugin será carregado automaticamente pelo mtcli:
 
 bash
 
-mt plugin
+mt atr
 
 
 
@@ -62,9 +62,5 @@ Acesse a documentação completa em:
 
 
 
-👉 \[https://plugin-exemplo.readthedocs.io](https://plugin-exemplo.readthedocs.io)
-
-
-
-
+👉 \[https://mtcli-atr.readthedocs.io](https://mtcli-atr.readthedocs.io)
 
