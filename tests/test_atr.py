@@ -1,9 +1,11 @@
 import pytest
 from mtcli_atr.atr import calcular_atr
 
+
 def gerar_rates_simples(qtd, high=110, low=100, close=105):
     """Gera candles falsos com valores constantes."""
     return [{"high": high, "low": low, "close": close} for _ in range(qtd)]
+
 
 def test_calcula_atr_com_dados_suficientes():
     periodo = 3
@@ -17,11 +19,13 @@ def test_calcula_atr_com_dados_suficientes():
     # TRs esperados: 15, 15, 15 => ATR = 15
     assert pytest.approx(atr, 0.01) == 10
 
+
 def test_erro_se_dados_insuficientes():
     periodo = 5
     rates = gerar_rates_simples(3)
     with pytest.raises(ValueError, match="Quantidade insuficiente de dados"):
         calcular_atr(rates, periodo)
+
 
 def test_calculo_com_valores_variados():
     periodo = 2
@@ -32,4 +36,3 @@ def test_calculo_com_valores_variados():
     ]
     atr = calcular_atr(rates, periodo)
     assert pytest.approx(atr, 0.01) == 17.5
-
