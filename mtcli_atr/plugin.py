@@ -14,9 +14,9 @@ log = setup_logger()
 @click.version_option(package_name="mtcli-atr")
 @click.option("--symbol", "-s", default="IBOV", help="Símbolo do ativo (default IBOV).")
 @click.option(
-    "--periodo", "-po", type=int, default=14, help="Período do ATR (default 14)."
+    "--bars", "-b", "periodo", type=int, default=14, help="Período do ATR (default 14)."
 )
-@click.option("--timeframe", "-t", default="D1", help="Timeframe (ex: M1, H1, D1).")
+@click.option("--period", "-p", "timeframe", default="D1", help="Timeframe (ex: M1, H1, D1).")
 def atr(symbol, periodo, timeframe):
     """Exibe o indicador ATR (Average True Range)"""
     conectar()
