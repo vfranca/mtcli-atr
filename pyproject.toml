@@ -19,7 +19,7 @@ repository = "https://github.com/vfranca/mtcli-atr"
 issues = "https://github.com/vfranca/mtcli-atr/issues"
 
 [project.entry-points."mtcli.plugins"]
-mtcli-atr = "mtcli_atr.plugin:atr"
+mtcli_atr = "mtcli_atr.plugin:register"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
