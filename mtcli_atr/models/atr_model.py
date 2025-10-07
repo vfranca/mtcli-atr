@@ -2,6 +2,7 @@ from mtcli.logger import setup_logger
 
 log = setup_logger()
 
+
 def calcular_atr(rates, periodo):
     """Calcula o ATR (Average True Range)."""
     trs = []
@@ -18,4 +19,3 @@ def calcular_atr(rates, periodo):
         raise ValueError(msg)
 
     return sum(trs[-periodo:]) / periodo
-

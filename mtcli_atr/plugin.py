@@ -8,11 +8,22 @@ from mtcli_atr.conf import (
 )
 
 
-@click.command("atr")
+@click.command(
+    "atr", help="Exibe o indicador ATR (Average True Range) do ativo informado."
+)
 @click.version_option(package_name="mtcli-atr")
 @click.option("--symbol", "-s", default=SYMBOL, help="Símbolo do ativo (default IBOV).")
-@click.option("--bars", "-b", "periodo", type=int, default=BARS, help="Período do ATR (default 14).")
-@click.option("--period", "-p", "timeframe", default=PERIOD, help="Timeframe (ex: M1, H1, D1).")
+@click.option(
+    "--bars",
+    "-b",
+    "periodo",
+    type=int,
+    default=BARS,
+    help="Período do ATR (default 14).",
+)
+@click.option(
+    "--period", "-p", "timeframe", default=PERIOD, help="Timeframe (ex: M1, H1, D1)."
+)
 def atr(symbol, periodo, timeframe):
     """Exibe o indicador ATR (Average True Range)."""
     try:

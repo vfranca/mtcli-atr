@@ -5,6 +5,7 @@ from mtcli_atr.models.atr_model import calcular_atr
 
 log = setup_logger()
 
+
 def processar_atr(symbol, periodo, timeframe):
     conectar()
 
@@ -25,4 +26,3 @@ def processar_atr(symbol, periodo, timeframe):
     valor_atr = calcular_atr(rates, periodo)
     shutdown()
     return valor_atr
-
