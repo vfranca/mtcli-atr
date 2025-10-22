@@ -1,4 +1,5 @@
 import MetaTrader5 as mt5
+
 from mtcli.conecta import conectar, shutdown
 from mtcli.logger import setup_logger
 from mtcli_atr.models.atr_model import calcular_atr

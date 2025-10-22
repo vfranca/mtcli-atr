@@ -1,5 +1,7 @@
+from unittest.mock import patch
+
 import pytest
-from unittest.mock import patch, MagicMock
+
 from mtcli_atr.controllers.atr_controller import processar_atr
 
 

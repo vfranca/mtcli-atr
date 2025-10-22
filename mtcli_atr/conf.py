@@ -1,8 +1,8 @@
 """Configuracoes do plugin."""
 
 import os
-from mtcli.conf import config
 
+from mtcli.conf import config
 
 SYMBOL = os.getenv("SYMBOL", config["DEFAULT"].get("symbol", fallback="WIN$N"))
 PERIOD = os.getenv("PERIOD", config["DEFAULT"].get("period", fallback="D1"))

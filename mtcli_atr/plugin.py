@@ -1,11 +1,12 @@
 import click
-from mtcli_atr.controllers.atr_controller import processar_atr
-from mtcli_atr.views.atr_view import exibir_resultado_atr, exibir_erro
+
 from mtcli_atr.conf import (
-    SYMBOL,
-    PERIOD,
     BARS,
+    PERIOD,
+    SYMBOL,
 )
+from mtcli_atr.controllers.atr_controller import processar_atr
+from mtcli_atr.views.atr_view import exibir_erro, exibir_resultado_atr
 
 
 @click.command(

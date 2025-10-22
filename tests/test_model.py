@@ -1,4 +1,5 @@
 import pytest
+
 from mtcli_atr.models.atr_model import calcular_atr
 
 

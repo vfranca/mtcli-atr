@@ -1,5 +1,6 @@
 from unittest.mock import patch
-from mtcli_atr.views.atr_view import exibir_resultado_atr, exibir_erro
+
+from mtcli_atr.views.atr_view import exibir_erro, exibir_resultado_atr
 
 
 @patch("mtcli_atr.views.atr_view.click.echo")
