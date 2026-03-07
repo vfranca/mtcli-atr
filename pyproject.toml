@@ -1,27 +1,52 @@
 [project]
 name = "mtcli-atr"
-version = "1.2.1"
+version = "1.2.2"
 description = "Plugin mtcli do indicador ATR"
 authors = [
     {name = "Valmir França da Silva",email = "vfranca3@gmail.com"}
 ]
 readme = "README.md"
-license = "GPL-3.0"
+license = "MIT"
 requires-python = ">=3.10,<3.14.0"
+
+keywords = [
+    "trading",
+    "ATR",
+    "indicador técnico",
+    "análise técnica",
+    "metatrader5",
+    "mt5",
+    "cli",
+    "acessibilidade",
+    "screen reader friendly"
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
 dependencies = [
-    "mtcli>=1.18.1",
+    "mtcli>=3.7.1",
     "click (>=8.3.0,<9.0.0)",
     "metatrader5 (>=5.0.5370,<6.0.0)"
 ]
 
 [project.urls]
-homepage = "https://pypi.org/project/mtcli-atr"
-documentation = "https://mtcli-atr.readthedocs.io"
-repository = "https://github.com/vfranca/mtcli-atr"
-issues = "https://github.com/vfranca/mtcli-atr/issues"
+Homepage = "https://github.com/vfranca/mtcli-atr"
+Documentation = "https://mtcli-atr.readthedocs.io"
+Repository = "https://github.com/vfranca/mtcli-atr"
+Issues = "https://github.com/vfranca/mtcli-atr/issues"
 
 [project.entry-points."mtcli.plugins"]
-mtcli_atr = "mtcli_atr.plugin:register"
+mtcli-atr = "mtcli_atr.plugin:register"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

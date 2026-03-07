@@ -60,5 +60,5 @@ Para instruções de desenvolvimento, estrutura de código e testes, veja o arqu
   
 Licença
   
-Este projeto está licenciado sob a GNU General Public License v3.0.  
+Este projeto está licenciado sob a MIT  
 Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
